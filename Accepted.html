@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-<title>Home — RespMultimodal 2026</title>
+<title>Accepted Papers — RespMultimodal 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    TOKENS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -643,14 +642,13 @@ footer{background:var(--navy);padding:60px 0 0}
   .btn:active{opacity:.85;transform:scale(.98)}
 }
 
-/* page banner */
 .page-banner{padding:120px 0 52px;background:linear-gradient(155deg,#f4f7fd 0%,#eaf0fb 55%,#dce8fa 100%);position:relative;overflow:hidden}
 .page-banner::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 55% at 78% 28%,rgba(61,127,255,.07) 0%,transparent 70%)}
-.page-banner h1{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy);line-height:1.15;margin-bottom:10px;position:relative;z-index:1}
+.page-banner-inner{position:relative;z-index:1}
+.page-banner h1{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy);line-height:1.15;margin-bottom:10px}
 .page-banner h1 em{font-style:normal;color:var(--accent)}
-.page-banner p{font-size:.95rem;color:var(--muted);position:relative;z-index:1}
+.page-banner p{font-size:.95rem;color:var(--muted)}
 .tba-box{text-align:center;padding:80px 0;color:var(--muted);font-family:var(--fm);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
-
 </style>
 </head>
 <body>
@@ -713,216 +711,32 @@ footer{background:var(--navy);padding:60px 0 0}
     <a href="calls.html">Submit Paper →</a>
   </div>
 </header>
-<!-- ━━ HERO ━━ -->
-<section class="hero" id="about">
-  <div class="hero-deco">
-    <div class="hd a"></div><div class="hd b"></div>
-    <div class="hd c"></div><div class="hd d"></div><div class="hd e"></div>
-  </div>
-  <div class="wrap">
-    <div class="hero-g">
-      <div>
-        <div class="eyebrow"><div class="dot"></div><span>KDD 2026 · Jeju, Korea · August 2026</span></div>
-        <h1>RespMultimodal 2026:<br><em>Responsible Multimodal</em><br>Foundation Models for<br>Knowledge Discovery</h1>
-        <p class="hero-tagline">Responsibility · Reliability · Robustness in MLLM</p>
-        <p class="hero-sub">Co-located with <a href="https://kdd2026.kdd.org/" target="_blank">ACM SIGKDD 2026</a> — the premier international conference on Knowledge Discovery and Data Mining. Held at ICC Jeju, South Korea.</p>
-        <div class="hero-meta">
-          <div class="meta-item">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="11" rx="2"/><path d="M5 1v3M11 1v3M1 7h14"/></svg>
-            <span>August 2026 (TBD)</span>
-          </div>
-          <div class="meta-item">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1C5.2 1 3 3.2 3 6c0 3.8 5 9 5 9s5-5.2 5-9c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6" r="1.5"/></svg>
-            <span>ICC Jeju, South Korea</span>
-          </div>
-          <div class="meta-item">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1l1.8 3.7 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2.2 5.3l4-.6z"/></svg>
-            <span>Best Paper Award</span>
-          </div>
-        </div>
-        <div class="hero-btns">
-          <a href="#calls" class="btn btn-p">Call for Papers</a>
-          <a href="https://respmultimodal2026.github.io/" target="_blank" class="btn btn-o">Workshop Website ↗</a>
-        </div>
-      </div>
 
-      <!-- Important Dates card -->
-      <div class="hcard" id="dates">
-        <div class="hcard-title">Important Dates</div>
-        <div class="dl">
-          <div class="di">
-            <span class="dl-label">Paper Submission</span>
-            <span class="dl-val hi">April 30, 2026</span>
-          </div>
-          <div class="di">
-            <span class="dl-label">Author Notification</span>
-            <span class="dl-val">June 4, 2026</span>
-          </div>
-          <div class="di">
-            <span class="dl-label">Camera-Ready</span>
-            <span class="dl-val">June 11, 2026</span>
-          </div>
-          <div class="di">
-            <span class="dl-label">Workshop Date</span>
-            <span class="dl-val hi">August 2026 (TBD)</span>
-          </div>
-        </div>
-        <div class="hcard-sep"></div>
-        <a href="#submit" class="btn btn-p btn-fw">Submit via OpenReview →</a>
-      </div>
-    </div>
+<div class="page-banner">
+  <div class="wrap page-banner-inner">
+    <h1>Accepted <em>Papers</em></h1>
+    <p>Results will be announced after the review process.</p>
   </div>
-</section>
-
-<!-- ━━ ABOUT ━━ -->
-<section class="sec" id="goals">
-  <div class="wrap">
-    <div class="about-box">
-      <!-- left: prose -->
-      <div class="about-prose">
-        <div class="sh">
-          <span class="tag">About the Workshop</span>
-          <h2>Goals &amp; <span class="ul">Scope</span></h2>
-        </div>
-        <p>Multimodal Large Language Models (MLLMs), integrating text, images, audio, and video, are rapidly becoming central to data analysis, pattern summarization, and hypothesis generation. However, growing evidence suggests that <strong>biases, vulnerabilities, and opaque decision processes</strong> in these models can fundamentally reshape the outcomes of data mining.</p>
-        <p>RespMultimodal 2026 focuses on framing bias, fairness, interpretability, and robustness <strong>not as abstract ethical concerns but as core data mining challenges</strong>. We explicitly seek work that explores how MLLMs affect discovery validity, introduce spurious cross-modal correlations, and influence data-driven decision-making within the KDD community's scope.</p>
-        <p>All submissions must include a clear <strong>Responsible AI component</strong> — such as fairness, reliability, or transparency. Work focusing solely on unimodal LLMs is out of scope.</p>
-      </div>
-      <!-- right: numbered list -->
-      <div class="about-list">
-        <div class="sh">
-          <span class="tag">What to Expect</span>
-          <h2>Workshop <span class="ul">Highlights</span></h2>
-        </div>
-        <div class="hl anim">
-          <span class="hl-n">01</span>
-          <div>
-            <div class="hl-t">Two Submission Tracks</div>
-            <div class="hl-d">Submit a <strong>full research paper</strong> (up to 6 pages) or an <strong>extended abstract</strong> for position, vision, or early-stage work (up to 2 pages).</div>
-          </div>
-        </div>
-        <div class="hl anim">
-          <span class="hl-n">02</span>
-          <div>
-            <div class="hl-t">KDD Main Track Welcome</div>
-            <div class="hl-d">Authors of <strong>accepted KDD 2026 main track papers</strong> are invited to present their work at the workshop if the topic aligns with MLLM and Responsibility.</div>
-          </div>
-        </div>
-        <div class="hl anim">
-          <span class="hl-n">03</span>
-          <div>
-            <div class="hl-t">Non-Archival</div>
-            <div class="hl-d">Accepted papers are posted on the workshop website but <strong>not in the ACM Digital Library</strong>, so authors may freely submit extended versions elsewhere.</div>
-          </div>
-        </div>
-        <div class="hl anim">
-          <span class="hl-n">04</span>
-          <div>
-            <div class="hl-t">Best Paper Award</div>
-            <div class="hl-d">Outstanding papers will be recognized with a <strong>Best Paper Award</strong>. Details to be announced.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ━━ TOPICS ━━ -->
-<section class="sec topics-bg" id="topics">
+</div>
+<section class="sec">
   <div class="wrap">
     <div class="sh c">
-      <span class="tag">Research Areas</span>
-      <h2>Topics of <span class="ul">Interest</span></h2>
-      <p>We invite submissions on topics including, but not limited to, the following areas. All submissions must pertain to Multimodal LLMs.</p>
+      <span class="tag">Regular Track</span>
+      <h2>Regular <span class="ul">Papers</span></h2>
     </div>
-    <div class="topics-grid">
-      <div class="topic-card anim">
-        <div class="topic-title">Evaluation and Auditing</div>
-        <div class="topic-desc">Methods and metrics for auditing discoveries mediated by foundation models.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Benchmarks and Datasets</div>
-        <div class="topic-desc">New datasets for assessing the responsibility and reliability of MLLMs in discovery tasks.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Bias and Vulnerabilities</div>
-        <div class="topic-desc">Analysis of how multimodal biases distort pattern discovery and lead to spurious correlations.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Fairness-Aware Discovery</div>
-        <div class="topic-desc">Trade-offs between fairness constraints and discovery power.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Interpretability and Transparency</div>
-        <div class="topic-desc">Techniques for making multimodal models understandable for trustworthy data mining.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Synthetic Data &amp; Hallucination</div>
-        <div class="topic-desc">How MLLM-generated synthetic data and hallucinated patterns propagate into and corrupt downstream discovery pipelines.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Failure Modes in Generative AI</div>
-        <div class="topic-desc">Case studies on how models amplify or suppress critical signals.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Agentic Discovery Pipelines</div>
-        <div class="topic-desc">Bias accumulation and error propagation in multi-step MLLM agents that iteratively explore data.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">High-Stakes Domain Discovery</div>
-        <div class="topic-desc">Challenges of MLLM-mediated discovery in healthcare, finance, and scientific research.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Human-Centric Discovery</div>
-        <div class="topic-desc">Agency, trust, and accountability in human-AI collaborative discovery.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Multimodal Fusion &amp; Distortion</div>
-        <div class="topic-desc">How different fusion mechanisms introduce spurious cross-modal correlations and affect the validity of discovered causal hypotheses.</div>
-      </div>
-      <div class="topic-card anim">
-        <div class="topic-title">Responsible Deployment</div>
-        <div class="topic-desc">Use of MLLMs under privacy, regulatory, and robustness constraints.</div>
-      </div>
+    <div class="tba-box">TBA — Acceptance notifications will be sent by June 4, 2026.</div>
+  </div>
+</section>
+<section class="sec" style="background:var(--light)">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Extended Abstract Track</span>
+      <h2>Extended <span class="ul">Abstracts</span></h2>
     </div>
+    <div class="tba-box">TBA — Acceptance notifications will be sent by June 4, 2026.</div>
   </div>
 </section>
 
-<!-- ━━ DATES BAND ━━ -->
-<section class="dates-band">
-  <div class="wrap">
-    <div class="sh c" style="margin-bottom:30px">
-      <span class="tag">Timeline</span>
-      <h2>Important Dates</h2>
-    </div>
-    <div class="dates-row">
-      <div class="dc hi anim">
-        <div class="dc-n">01</div>
-        <div class="dc-lbl">Deadline</div>
-        <div class="dc-title">Paper Submission</div>
-        <div class="dc-date"><span class="em">April 30, 2026</span></div>
-      </div>
-      <div class="dc anim">
-        <div class="dc-n">02</div>
-        <div class="dc-lbl">Decision</div>
-        <div class="dc-title">Author Notification</div>
-        <div class="dc-date">June 4, 2026</div>
-      </div>
-      <div class="dc anim">
-        <div class="dc-n">03</div>
-        <div class="dc-lbl">Deadline</div>
-        <div class="dc-title">Camera-Ready</div>
-        <div class="dc-date">June 11, 2026</div>
-      </div>
-      <div class="dc anim">
-        <div class="dc-n">04</div>
-        <div class="dc-lbl">Event</div>
-        <div class="dc-title">Workshop Date</div>
-        <div class="dc-date">August 2026<br><span style="opacity:.5;font-size:.78rem">(exact date TBD)</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- ━━ FOOTER ━━ -->
 <footer id="program">
   <div class="wrap">
