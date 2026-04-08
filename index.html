@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-<title>Home — RespMultimodal 2026</title>
+<title>RespMultimodal 2026 @ KDD 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    TOKENS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -446,7 +445,7 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 }
 .org-card:hover{border-color:var(--accent);box-shadow:var(--sh)}
 .org-av{
-  width:50px;height:50px;border-radius:9px;
+  width:36px;height:36px;border-radius:7px;
   background:var(--mid);border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;
   font-family:var(--fm);font-size:.64rem;font-weight:600;
@@ -642,77 +641,40 @@ footer{background:var(--navy);padding:60px 0 0}
 @media(hover:none){
   .btn:active{opacity:.85;transform:scale(.98)}
 }
-
-/* page banner */
-.page-banner{padding:120px 0 52px;background:linear-gradient(155deg,#f4f7fd 0%,#eaf0fb 55%,#dce8fa 100%);position:relative;overflow:hidden}
-.page-banner::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 55% at 78% 28%,rgba(61,127,255,.07) 0%,transparent 70%)}
-.page-banner h1{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy);line-height:1.15;margin-bottom:10px;position:relative;z-index:1}
-.page-banner h1 em{font-style:normal;color:var(--accent)}
-.page-banner p{font-size:.95rem;color:var(--muted);position:relative;z-index:1}
-.tba-box{text-align:center;padding:80px 0;color:var(--muted);font-family:var(--fm);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
-
 </style>
 </head>
 <body>
+
 <!-- ━━ HEADER ━━ -->
 <header id="hdr">
   <div class="wrap">
     <div class="nav-row">
-      <a href="index.html" class="logo"><img src="logo.png" alt="RespMultimodal 2026" style="height:36px;width:auto;display:block;"></a>
+      <a href="#about" class="logo"><img src="logo.png" alt="RespMultimodal 2026" style="height:36px;width:auto;display:block;"></a>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="calls.html">Call for Papers <span class="chev">▾</span></a>
-            <ul class="drop">
-              <li><a href="calls.html#calls">Regular Track</a></li>
-              <li><a href="calls.html#calls">Extended Abstract Track</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="accepted.html">Accepted Papers <span class="chev">▾</span></a>
-            <ul class="drop">
-              <li><a href="accepted.html">Regular Track</a></li>
-              <li><a href="accepted.html">Extended Abstract Track</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="program.html">Program <span class="chev">▾</span></a>
-            <ul class="drop">
-              <li><a href="program.html">Program at a Glance</a></li>
-              <li><a href="program.html#speakers">Keynote Speakers</a></li>
-            </ul>
-          </li>
-          <li><a href="organizers.html">Organizers</a></li>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#calls">Call for Papers</a></li>
+          <li><a href="#topics">Topics</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#organizers">Organizers</a></li>
         </ul>
       </nav>
-      <a href="calls.html" class="btn btn-p nav-cta">Submit Paper →</a>
+      <a href="#submit" class="btn btn-p nav-cta">Submit Paper →</a>
       <button class="hbg" id="hbg" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
   <div class="mob" id="mob">
-    <a href="index.html">Home</a>
-    <button class="mob-btn" aria-expanded="false" data-t="ms-calls">Call for Papers <span class="mob-arr">▾</span></button>
-    <div class="mob-sub" id="ms-calls">
-      <a href="calls.html#calls">Regular Track</a>
-      <a href="calls.html#calls">Extended Abstract Track</a>
-    </div>
-    <button class="mob-btn" aria-expanded="false" data-t="ms-acc">Accepted Papers <span class="mob-arr">▾</span></button>
-    <div class="mob-sub" id="ms-acc">
-      <a href="accepted.html">Regular Track</a>
-      <a href="accepted.html">Extended Abstract Track</a>
-    </div>
-    <button class="mob-btn" aria-expanded="false" data-t="ms-prog">Program <span class="mob-arr">▾</span></button>
-    <div class="mob-sub" id="ms-prog">
-      <a href="program.html">Program at a Glance</a>
-      <a href="program.html#speakers">Keynote Speakers</a>
-    </div>
-    <a href="organizers.html">Organizers</a>
-    <a href="calls.html">Submit Paper →</a>
+    <a href="#about">Home</a>
+    <a href="#calls">Call for Papers</a>
+    <a href="#topics">Topics</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#organizers">Organizers</a>
+    <a href="#submit">Submit Paper →</a>
   </div>
 </header>
+
 <!-- ━━ HERO ━━ -->
 <section class="hero" id="about">
   <div class="hero-deco">
@@ -923,6 +885,234 @@ footer{background:var(--navy);padding:60px 0 0}
     </div>
   </div>
 </section>
+
+<!-- ━━ CALL FOR SUBMISSIONS ━━ -->
+<section class="sec" id="calls">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Submissions</span>
+      <h2>Call for <span class="ul">Contributions</span></h2>
+      <p>Two submission tracks — choose based on the maturity and nature of your work.</p>
+    </div>
+    <div class="tracks">
+      <div class="track anim">
+        <span class="track-seq">Track 01</span>
+        <h3>Regular Track</h3>
+        <p>For mature research, novel methodologies, or comprehensive empirical studies. We encourage submissions that provide rigorous technical contributions to multimodal learning and data mining, including novel algorithms, large-scale evaluations, or in-depth case studies in high-stakes domains.</p>
+        <ul class="tspec">
+          <li><span class="k">Page Limit</span>Up to 6 pages (excl. refs)</li>
+          <li><span class="k">Format</span>ACM sigconf (LaTeX)</li>
+          <li><span class="k">Review</span>Single-blind</li>
+          <li><span class="k">Archival</span>Non-archival</li>
+        </ul>
+        <a href="#submit" class="tlink">Submit Regular Paper →</a>
+      </div>
+      <div class="track anim">
+        <span class="track-seq">Track 02</span>
+        <h3>Extended Abstract Track</h3>
+        <p>For early-stage ideas, provocative position statements, and vision papers to spark high-energy discussion. We especially welcome reports on <em>"negative results"</em> — sharing what didn't work and why is often as valuable as a success story.</p>
+        <ul class="tspec">
+          <li><span class="k">Page Limit</span>Up to 2 pages (excl. refs)</li>
+          <li><span class="k">Format</span>ACM sigconf (LaTeX)</li>
+          <li><span class="k">Review</span>Single-blind</li>
+          <li><span class="k">Archival</span>Non-archival</li>
+        </ul>
+        <a href="#submit" class="tlink">Submit Abstract →</a>
+      </div>
+    </div>
+
+    <div class="fmt-box">
+      <div class="fmt-box-title">Formatting &amp; Submission Guidelines</div>
+      <ul class="fmt-list">
+        <li><strong>Template:</strong> ACM Conference Proceedings Primary Article Template — use the LaTeX <code>sigconf</code> format (<code>\documentclass[sigconf]{acmart}</code>). Submissions that deviate significantly from the format or page limits may be rejected without review.</li>
+        <li><strong>Single-Blind Review:</strong> Include your names and affiliations in the submission.</li>
+        <li><strong>Appendices:</strong> May be included after references; reviewers are not required to read them. The main paper must be self-contained.</li>
+        <li><strong>Non-Archival:</strong> Papers will be posted on the workshop website but will not appear in the ACM Digital Library. Authors may freely submit extended versions to other venues.</li>
+        <li><strong>KDD Main Track:</strong> Authors of accepted KDD 2026 main track papers may present at the workshop if the topic aligns with MLLM and Responsibility.</li>
+        <li><strong>Attendance:</strong> At least one author of each accepted paper must register and attend the workshop.</li>
+        <li><strong>All deadlines:</strong> 23:59 AoE (Anywhere on Earth).</li>
+      </ul>
+    </div>
+
+    <div class="submit-row">
+      <a href="https://respmultimodal2026.github.io/" target="_blank" class="btn btn-p" id="submit">Submit via OpenReview →</a>
+      <span class="submit-note">Submission link to be updated on the workshop website</span>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ INVITED SPEAKERS ━━ -->
+<section class="sec spk-bg" id="speakers">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Keynotes</span>
+      <h2>Invited <span class="ul">Speakers</span></h2>
+      <p>Distinguished researchers from academia and industry. Details to be announced.</p>
+    </div>
+    <div class="spk-grid">
+      <div class="spk-card anim">
+        <div class="spk-av">TBA</div>
+        <div>
+          <span class="spk-name">Speaker TBA</span>
+          <span class="spk-aff">University / Institution</span>
+          <span class="spk-topic">Talk Topic TBD</span>
+        </div>
+      </div>
+      <div class="spk-card anim">
+        <div class="spk-av">TBA</div>
+        <div>
+          <span class="spk-name">Speaker TBA</span>
+          <span class="spk-aff">University / Institution</span>
+          <span class="spk-topic">Talk Topic TBD</span>
+        </div>
+      </div>
+      <div class="spk-card anim">
+        <div class="spk-av">TBA</div>
+        <div>
+          <span class="spk-name">Speaker TBA</span>
+          <span class="spk-aff">University / Institution</span>
+          <span class="spk-topic">Talk Topic TBD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ ORGANIZERS ━━ -->
+<section class="sec" id="organizers">
+  <div class="wrap">
+    <div class="sh">
+      <span class="tag">People</span>
+      <h2>Workshop <span class="ul">Organizers</span></h2>
+    </div>
+    <div class="org-g">
+
+      <!-- General Chairs -->
+      <div class="org-sec anim">
+        <div class="org-lbl">General Chairs</div>
+        <div class="org-row">
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Seungbae Kim.jpg" alt="Seungbae Kim" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Seungbae Kim</span>
+              <span class="org-inst">University of South Florida</span>
+              <a class="org-link" href="https://sites.google.com/site/sbkimcv/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Jinyoung Han.png" alt="Jinyoung Han" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Jinyoung Han</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://sites.google.com/site/jyhantop/jinyoung-han-ph-d" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/S.Shyam Sundar.jpg" alt="Shyam Sundar" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Shyam Sundar</span>
+              <span class="org-inst">Pennsylvania State University</span>
+              <a class="org-link" href="https://bellisario.psu.edu/people/s-shyam-sundar" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Wei Wang.jpg" alt="Wei Wang" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Wei Wang</span>
+              <span class="org-inst">University of California, Los Angeles</span>
+              <a class="org-link" href="https://web.cs.ucla.edu/~weiwang/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Program Chairs -->
+      <div class="org-sec anim">
+        <div class="org-lbl">Program Chairs</div>
+        <div class="org-row">
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Haewoon Kwak.jpg" alt="Haewoon Kwak" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Haewoon Kwak</span>
+              <span class="org-inst">Indiana University</span>
+              <a class="org-link" href="https://luddy.iu.edu/people/kwak-haewoon.html" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Jisun An.jpg" alt="Jisun An" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Jisun An</span>
+              <span class="org-inst">Indiana University</span>
+              <a class="org-link" href="https://jisun.me/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Local Arrangement Chairs -->
+      <div class="org-sec anim">
+        <div class="org-lbl">Local Arrangement Chairs</div>
+        <div class="org-row">
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Sungeun Hong.png" alt="Sung-Eun Hong" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Sung-Eun Hong</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://www.csehong.com/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Yunseok Choi.webp" alt="Yunseok Choi" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Yunseok Choi</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://pure.skku.edu/en/persons/yunseok-choi/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Government & Industry Chairs -->
+      <div class="org-sec anim">
+        <div class="org-lbl">Government &amp; Industry Chairs</div>
+        <div class="org-row">
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Soyoung Park.jfif" alt="Soyoung Park" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Soyoung Park</span>
+              <span class="org-inst">National Assembly Research Service</span>
+              <a class="org-link" href="https://www.linkedin.com/in/soyoung-park-701388143/" target="_blank">↗ LinkedIn</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Seunghyun Lee.jfif" alt="Seunghyun Lee" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+            <div>
+              <span class="org-name">Seunghyun Lee</span>
+              <span class="org-inst">Naver AI Lab</span>
+              <a class="org-link" href="https://www.linkedin.com/in/seunghyun-lee0845528b/" target="_blank">↗ LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━ PROGRAM COMMITTEE ━━ -->
+<section class="sec-sm pc-bg" id="pc">
+  <div class="wrap">
+    <div class="sh c" style="margin-bottom:28px">
+      <span class="tag">Reviewers</span>
+      <h2>Program <span class="ul">Committee</span></h2>
+      <p>To be announced.</p>
+    </div>
+    <div style="text-align:center;padding:40px 0;color:var(--muted);font-family:var(--fm);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;">
+      TBA — Program committee list will be updated soon.
+    </div>
+  </div>
+</section>
+
 <!-- ━━ FOOTER ━━ -->
 <footer id="program">
   <div class="wrap">
@@ -968,6 +1158,7 @@ footer{background:var(--navy);padding:60px 0 0}
     </div>
   </div>
 </footer>
+
 <script>
 /* header shadow */
 const hdr = document.getElementById('hdr');
