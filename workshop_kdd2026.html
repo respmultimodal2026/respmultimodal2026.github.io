@@ -101,11 +101,7 @@ header.scrolled{box-shadow:var(--sh)}
   font-family:var(--fh);font-size:1.05rem;font-weight:800;
   color:var(--navy);display:flex;align-items:center;gap:9px;text-decoration:none
 }
-.logo-b{
-  background:var(--accent);color:#fff;
-  font-size:.62rem;padding:3px 7px;border-radius:4px;
-  font-family:var(--fm);letter-spacing:.07em;font-weight:500
-}
+
 
 /* desktop nav */
 nav>ul{display:flex;align-items:center;gap:2px}
@@ -638,7 +634,6 @@ footer{background:var(--navy);padding:60px 0 0}
 
 @media(max-width:360px){
   .hero h1{font-size:1.35rem}
-  .logo-b{display:none}
   .hcard{padding:18px 16px}
   .about-prose,.about-list{padding-left:18px;padding-right:18px}
 }
@@ -654,7 +649,7 @@ footer{background:var(--navy);padding:60px 0 0}
 <header id="hdr">
   <div class="wrap">
     <div class="nav-row">
-      <a href="#" class="logo"><span class="logo-b">KDD 2026</span>RespMultimodal</a>
+      <a href="#" class="logo"><img src="logo.png" alt="RespMultimodal 2026" style="height:46px;width:auto;display:block;"></a>
       <nav>
         <ul>
           <li><a href="#about">Home</a></li>
@@ -1007,7 +1002,7 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="org-lbl">General Chairs</div>
         <div class="org-row">
           <div class="org-card">
-            <div class="org-av">SK</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Seungbae Kim.jpg" alt="Seungbae Kim" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Seungbae Kim</span>
               <span class="org-inst">University of South Florida</span>
@@ -1015,7 +1010,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">JH</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Jinyoung Han.png" alt="Jinyoung Han" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Jinyoung Han</span>
               <span class="org-inst">Sungkyunkwan University</span>
@@ -1023,7 +1018,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">SS</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/S.Shyam Sundar.jpg" alt="Shyam Sundar" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Shyam Sundar</span>
               <span class="org-inst">Pennsylvania State University</span>
@@ -1031,7 +1026,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">WW</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Wei Wang.jpg" alt="Wei Wang" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Wei Wang</span>
               <span class="org-inst">University of California, Los Angeles</span>
@@ -1046,7 +1041,7 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="org-lbl">Program Chairs</div>
         <div class="org-row">
           <div class="org-card">
-            <div class="org-av">HK</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Haewoon Kwak.jpg" alt="Haewoon Kwak" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Haewoon Kwak</span>
               <span class="org-inst">Indiana University</span>
@@ -1054,7 +1049,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">JA</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Jisun An.jpg" alt="Jisun An" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Jisun An</span>
               <span class="org-inst">Indiana University</span>
@@ -1069,7 +1064,7 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="org-lbl">Local Arrangement Chairs</div>
         <div class="org-row">
           <div class="org-card">
-            <div class="org-av">SH</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Sungeun Hong.png" alt="Sung-Eun Hong" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Sung-Eun Hong</span>
               <span class="org-inst">Sungkyunkwan University</span>
@@ -1077,7 +1072,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">YC</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Yunseok Choi.webp" alt="Yunseok Choi" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Yunseok Choi</span>
               <span class="org-inst">Sungkyunkwan University</span>
@@ -1092,7 +1087,7 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="org-lbl">Government &amp; Industry Chairs</div>
         <div class="org-row">
           <div class="org-card">
-            <div class="org-av">SP</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Soyoung Park.jfif" alt="Soyoung Park" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Soyoung Park</span>
               <span class="org-inst">National Assembly Research Service</span>
@@ -1100,7 +1095,7 @@ footer{background:var(--navy);padding:60px 0 0}
             </div>
           </div>
           <div class="org-card">
-            <div class="org-av">SL</div>
+            <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Seunghyun Lee.jfif" alt="Seunghyun Lee" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
               <span class="org-name">Seunghyun Lee</span>
               <span class="org-inst">Naver AI Lab</span>
