@@ -448,12 +448,13 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
   text-transform:uppercase;letter-spacing:.12em;
   padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:16px
 }
-.org-row{display:flex;flex-wrap:wrap;gap:10px}
+.org-row{display:flex;flex-wrap:nowrap;gap:10px}
 .org-card{
   display:flex;align-items:center;gap:11px;
   padding:10px 16px;border:1px solid var(--border);
   border-radius:var(--r);background:#fff;
-  transition:border-color .15s,box-shadow .15s
+  transition:border-color .15s,box-shadow .15s;
+  flex:1;min-width:0
 }
 .org-card:hover{border-color:var(--accent);box-shadow:var(--sh)}
 .org-av{
@@ -1074,7 +1075,7 @@ footer{background:var(--navy);padding:60px 0 0}
           <div class="org-card">
             <div class="org-av" style="overflow:hidden;padding:0;"><img src="chaires_photo/Sungeun Hong.png" alt="Sung-Eun Hong" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
             <div>
-              <span class="org-name">Sung-Eun Hong</span>
+              <span class="org-name">Sungeun Hong</span>
               <span class="org-inst">Sungkyunkwan University</span>
               <a class="org-link" href="https://www.csehong.com/" target="_blank">↗ Website</a>
             </div>
