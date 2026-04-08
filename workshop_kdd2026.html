@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-<title>Workshop @ KDD 2026</title>
+<title>RespMultimodal 2026 @ KDD 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -218,6 +218,10 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{font-size:.97rem;color:var(--muted);line-height:1.65;margin-bottom:8px}
 .hero-sub a{color:var(--accent);font-weight:500}
+.hero-tagline{
+  font-size:.9rem;color:var(--navy);line-height:1.6;
+  margin-bottom:8px;font-style:italic;opacity:.75
+}
 
 .hero-meta{display:flex;gap:22px;margin:26px 0 34px;flex-wrap:wrap}
 .meta-item{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted)}
@@ -268,7 +272,7 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .about-prose p:last-child{margin-bottom:0}
 .about-prose strong{color:var(--navy);font-weight:600}
 
-/* right: numbered prose list — no floating cards */
+/* right: numbered prose list */
 .about-list{padding:52px 44px}
 .about-list .sh{margin-bottom:28px}
 .hl{
@@ -286,6 +290,22 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .hl-d strong{color:var(--navy);font-weight:600}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TOPICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.topics-bg{background:var(--light)}
+.topics-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px
+}
+.topic-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:18px 20px;transition:box-shadow .18s,border-color .18s
+}
+.topic-card:hover{box-shadow:var(--sh);border-color:var(--accent)}
+.topic-title{font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.topic-desc{font-size:.79rem;color:var(--muted);line-height:1.6}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    DATES BAND
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .dates-band{background:var(--navy);padding:56px 0}
@@ -294,7 +314,7 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .dates-band .sh{margin-bottom:30px}
 
 .dates-row{
-  display:grid;grid-template-columns:repeat(3,1fr);
+  display:grid;grid-template-columns:repeat(4,1fr);
   border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);overflow:hidden
 }
 .dc{
@@ -324,10 +344,10 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .dc.hi .dc-date .em{color:#fff}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   CALL FOR SUBMISSIONS — joined box
+   CALL FOR SUBMISSIONS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .tracks{
-  display:grid;grid-template-columns:repeat(3,1fr);
+  display:grid;grid-template-columns:repeat(2,1fr);
   border:1px solid var(--border);border-radius:var(--rl);
   overflow:hidden;background:#fff
 }
@@ -342,7 +362,6 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 }
 .track:nth-child(1)::before{background:var(--accent)}
 .track:nth-child(2)::before{background:var(--teal)}
-.track:nth-child(3)::before{background:var(--blue)}
 .track-seq{
   font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;
   text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block
@@ -365,6 +384,25 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .tlink:hover{color:var(--blue)}
 .submit-row{margin-top:32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .submit-note{font-family:var(--fm);font-size:.73rem;color:var(--muted);letter-spacing:.04em}
+
+/* format note box */
+.fmt-box{
+  margin-top:28px;padding:20px 24px;border:1px solid var(--border);
+  border-radius:var(--r);background:var(--light)
+}
+.fmt-box-title{
+  font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;font-weight:600
+}
+.fmt-list{display:flex;flex-direction:column;gap:6px}
+.fmt-list li{
+  font-size:.82rem;color:var(--muted);line-height:1.55;
+  padding-left:14px;position:relative
+}
+.fmt-list li::before{
+  content:'·';position:absolute;left:2px;color:var(--accent);font-weight:700
+}
+.fmt-list strong{color:var(--navy);font-weight:600}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SPEAKERS
@@ -419,6 +457,8 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 }
 .org-name{font-size:.86rem;font-weight:600;color:var(--navy);display:block;line-height:1.3}
 .org-inst{font-size:.74rem;color:var(--muted);display:block}
+.org-card a.org-link{font-size:.7rem;color:var(--accent);display:block;margin-top:1px}
+.org-card a.org-link:hover{color:var(--blue)}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PROGRAM COMMITTEE
@@ -483,6 +523,12 @@ footer{background:var(--navy);padding:60px 0 0}
 .anim:nth-child(4){animation-delay:.22s}
 .anim:nth-child(5){animation-delay:.28s}
 .anim:nth-child(6){animation-delay:.34s}
+.anim:nth-child(7){animation-delay:.40s}
+.anim:nth-child(8){animation-delay:.46s}
+.anim:nth-child(9){animation-delay:.52s}
+.anim:nth-child(10){animation-delay:.58s}
+.anim:nth-child(11){animation-delay:.62s}
+.anim:nth-child(12){animation-delay:.66s}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    RESPONSIVE 1024px
@@ -497,13 +543,16 @@ footer{background:var(--navy);padding:60px 0 0}
   .about-list{padding:36px 36px 40px}
 
   .dates-row{grid-template-columns:1fr 1fr}
-  .dc:first-child{grid-column:1/-1;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .dc:nth-child(2){border-right:1px solid rgba(255,255,255,.1)}
+  .dc:first-child,.dc:nth-child(3){border-right:1px solid rgba(255,255,255,.1)}
+  .dc:nth-child(2){border-right:none}
+  .dc:nth-child(3){border-right:1px solid rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.1)}
+  .dc:nth-child(4){border-right:none;border-top:1px solid rgba(255,255,255,.1)}
 
   .tracks{grid-template-columns:1fr}
   .track{border-right:none;border-bottom:1px solid var(--border)}
   .track:last-child{border-bottom:none}
 
+  .topics-grid{grid-template-columns:repeat(2,1fr)}
   .spk-grid{grid-template-columns:repeat(3,1fr)}
 
   .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
@@ -538,13 +587,10 @@ footer{background:var(--navy);padding:60px 0 0}
   .about-list{padding:28px 24px 32px}
 
   .dates-row{grid-template-columns:1fr}
-  .dc{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1)}
+  .dc{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1);border-top:none!important}
   .dc:last-child{border-bottom:none}
-  .dc:first-child{grid-column:auto}
 
-  .tracks{grid-template-columns:1fr}
-  .track{border-right:none;border-bottom:1px solid var(--border);padding:28px 22px}
-  .track:last-child{border-bottom:none}
+  .topics-grid{grid-template-columns:1fr 1fr;gap:10px}
 
   .spk-grid{grid-template-columns:1fr 1fr;gap:14px}
   .spk-card{grid-template-columns:46px 1fr;gap:12px;padding:18px}
@@ -579,6 +625,7 @@ footer{background:var(--navy);padding:60px 0 0}
   .hero h1{font-size:1.5rem}
   .hero-btns{flex-direction:column}
   .hero-btns .btn{width:100%;justify-content:center}
+  .topics-grid{grid-template-columns:1fr}
   .spk-grid{grid-template-columns:1fr}
   .org-row{flex-direction:column}
   .org-card{width:100%}
@@ -589,9 +636,6 @@ footer{background:var(--navy);padding:60px 0 0}
   .dates-band{padding:44px 0}
 }
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   RESPONSIVE 360px
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @media(max-width:360px){
   .hero h1{font-size:1.35rem}
   .logo-b{display:none}
@@ -610,7 +654,7 @@ footer{background:var(--navy);padding:60px 0 0}
 <header id="hdr">
   <div class="wrap">
     <div class="nav-row">
-      <a href="#" class="logo"><span class="logo-b">KDD 2026</span>Workshop</a>
+      <a href="#" class="logo"><span class="logo-b">KDD 2026</span>RespMultimodal</a>
       <nav>
         <ul>
           <li><a href="#about">Home</a></li>
@@ -618,26 +662,11 @@ footer{background:var(--navy);padding:60px 0 0}
             <a href="#calls">Call for Submissions <span class="chev">▾</span></a>
             <ul class="drop">
               <li><a href="#calls">Regular Track</a></li>
-              <li><a href="#calls">Abstract Track</a></li>
-              <li><a href="#calls">Late-Breaking Track</a></li>
+              <li><a href="#calls">Extended Abstract Track</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#program">Accepted Papers <span class="chev">▾</span></a>
-            <ul class="drop">
-              <li><a href="#program">Regular Track</a></li>
-              <li><a href="#program">Abstract Track</a></li>
-              <li><a href="#program">Late-Breaking Track</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#program">Program <span class="chev">▾</span></a>
-            <ul class="drop">
-              <li><a href="#program">Program at a Glance</a></li>
-              <li><a href="#speakers">Keynote Speakers</a></li>
-              <li><a href="#program">Program Schedule</a></li>
-            </ul>
-          </li>
+          <li><a href="#topics">Topics</a></li>
+          <li><a href="#speakers">Speakers</a></li>
           <li><a href="#organizers">Organizers</a></li>
         </ul>
       </nav>
@@ -652,21 +681,10 @@ footer{background:var(--navy);padding:60px 0 0}
     <button class="mob-btn" aria-expanded="false" data-t="ms-calls">Call for Submissions <span class="mob-arr">▾</span></button>
     <div class="mob-sub" id="ms-calls">
       <a href="#calls">Regular Track</a>
-      <a href="#calls">Abstract Track</a>
-      <a href="#calls">Late-Breaking Track</a>
+      <a href="#calls">Extended Abstract Track</a>
     </div>
-    <button class="mob-btn" aria-expanded="false" data-t="ms-acc">Accepted Papers <span class="mob-arr">▾</span></button>
-    <div class="mob-sub" id="ms-acc">
-      <a href="#program">Regular Track</a>
-      <a href="#program">Abstract Track</a>
-      <a href="#program">Late-Breaking Track</a>
-    </div>
-    <button class="mob-btn" aria-expanded="false" data-t="ms-prog">Program <span class="mob-arr">▾</span></button>
-    <div class="mob-sub" id="ms-prog">
-      <a href="#program">Program at a Glance</a>
-      <a href="#speakers">Keynote Speakers</a>
-      <a href="#program">Program Schedule</a>
-    </div>
+    <a href="#topics">Topics</a>
+    <a href="#speakers">Speakers</a>
     <a href="#organizers">Organizers</a>
     <a href="#submit">Submit Paper →</a>
   </div>
@@ -681,13 +699,14 @@ footer{background:var(--navy);padding:60px 0 0}
   <div class="wrap">
     <div class="hero-g">
       <div>
-        <div class="eyebrow"><div class="dot"></div><span>KDD 2026 · Jeju, Korea · August 9–13</span></div>
-        <h1>International Workshop on<br><em>[Workshop Title]</em></h1>
-        <p class="hero-sub">Co-located with <a href="https://kdd2026.kdd.org/" target="_blank">ACM SIGKDD 2026</a> — the premier international conference on Knowledge Discovery and Data Mining.</p>
+        <div class="eyebrow"><div class="dot"></div><span>KDD 2026 · Jeju, Korea · August 2026</span></div>
+        <h1>RespMultimodal 2026:<br><em>Responsible Multimodal</em><br>Foundation Models for<br>Knowledge Discovery</h1>
+        <p class="hero-tagline">Responsibility · Reliability · Robustness in MLLM</p>
+        <p class="hero-sub">Co-located with <a href="https://kdd2026.kdd.org/" target="_blank">ACM SIGKDD 2026</a> — the premier international conference on Knowledge Discovery and Data Mining. Held at ICC Jeju, South Korea.</p>
         <div class="hero-meta">
           <div class="meta-item">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="11" rx="2"/><path d="M5 1v3M11 1v3M1 7h14"/></svg>
-            <span>August 9–13, 2026</span>
+            <span>August 2026 (TBD)</span>
           </div>
           <div class="meta-item">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1C5.2 1 3 3.2 3 6c0 3.8 5 9 5 9s5-5.2 5-9c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6" r="1.5"/></svg>
@@ -700,7 +719,7 @@ footer{background:var(--navy);padding:60px 0 0}
         </div>
         <div class="hero-btns">
           <a href="#calls" class="btn btn-p">Call for Papers</a>
-          <a href="#program" class="btn btn-o">View Program</a>
+          <a href="https://respmultimodal2026.github.io/" target="_blank" class="btn btn-o">Workshop Website ↗</a>
         </div>
       </div>
 
@@ -710,19 +729,19 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="dl">
           <div class="di">
             <span class="dl-label">Paper Submission</span>
-            <span class="dl-val ext"><del>May 8, 2026</del>&nbsp; May 15, 2026 (extended)</span>
+            <span class="dl-val hi">April 30, 2026</span>
           </div>
           <div class="di">
             <span class="dl-label">Author Notification</span>
-            <span class="dl-val">June 8, 2026</span>
+            <span class="dl-val">June 4, 2026</span>
           </div>
           <div class="di">
             <span class="dl-label">Camera-Ready</span>
-            <span class="dl-val">June 29, 2026</span>
+            <span class="dl-val">June 11, 2026</span>
           </div>
           <div class="di">
             <span class="dl-label">Workshop Date</span>
-            <span class="dl-val hi">August 9, 2026</span>
+            <span class="dl-val hi">August 2026 (TBD)</span>
           </div>
         </div>
         <div class="hcard-sep"></div>
@@ -742,9 +761,9 @@ footer{background:var(--navy);padding:60px 0 0}
           <span class="tag">About the Workshop</span>
           <h2>Goals &amp; <span class="ul">Scope</span></h2>
         </div>
-        <p>[Workshop description paragraph 1. Introduce the research domain, its significance, and the role of data mining and AI within this space. Describe the long-running tradition or background if applicable.]</p>
-        <p>The goal of this year's workshop is to encourage KDD researchers to address the numerous challenges in [research domain] using data mining technologies. This year's theme — <strong>"[Theme Title]"</strong> — focuses on [theme description].</p>
-        <p>We welcome both foundational research and application-driven work that bridges the communities of [field A] and [field B] to expedite discoveries in [application area].</p>
+        <p>Multimodal Large Language Models (MLLMs), integrating text, images, audio, and video, are rapidly becoming central to data analysis, pattern summarization, and hypothesis generation. However, growing evidence suggests that <strong>biases, vulnerabilities, and opaque decision processes</strong> in these models can fundamentally reshape the outcomes of data mining.</p>
+        <p>RespMultimodal 2026 focuses on framing bias, fairness, interpretability, and robustness <strong>not as abstract ethical concerns but as core data mining challenges</strong>. We explicitly seek work that explores how MLLMs affect discovery validity, introduce spurious cross-modal correlations, and influence data-driven decision-making within the KDD community's scope.</p>
+        <p>All submissions must include a clear <strong>Responsible AI component</strong> — such as fairness, reliability, or transparency. Work focusing solely on unimodal LLMs is out of scope.</p>
       </div>
       <!-- right: numbered list -->
       <div class="about-list">
@@ -755,31 +774,92 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="hl anim">
           <span class="hl-n">01</span>
           <div>
-            <div class="hl-t">Multiple Submission Tracks</div>
-            <div class="hl-d">Besides <strong>full workshop papers</strong>, we invite <strong>abstracts</strong> of preliminary results and <strong>late-breaking research</strong> with high practical significance.</div>
+            <div class="hl-t">Two Submission Tracks</div>
+            <div class="hl-d">Submit a <strong>full research paper</strong> (up to 6 pages) or an <strong>extended abstract</strong> for position, vision, or early-stage work (up to 2 pages).</div>
           </div>
         </div>
         <div class="hl anim">
           <span class="hl-n">02</span>
           <div>
-            <div class="hl-t">Oral Presentations</div>
-            <div class="hl-d">Authors of <strong>all accepted submissions</strong> are allocated time for an oral presentation at the workshop.</div>
+            <div class="hl-t">KDD Main Track Welcome</div>
+            <div class="hl-d">Authors of <strong>accepted KDD 2026 main track papers</strong> are invited to present their work at the workshop if the topic aligns with MLLM and Responsibility.</div>
           </div>
         </div>
         <div class="hl anim">
           <span class="hl-n">03</span>
           <div>
-            <div class="hl-t">Journal Invitation</div>
-            <div class="hl-d">Accepted full papers will be invited to extend and submit to a leading journal (e.g., <strong>IEEE/ACM TCBB</strong> or equivalent).</div>
+            <div class="hl-t">Non-Archival</div>
+            <div class="hl-d">Accepted papers are posted on the workshop website but <strong>not in the ACM Digital Library</strong>, so authors may freely submit extended versions elsewhere.</div>
           </div>
         </div>
         <div class="hl anim">
           <span class="hl-n">04</span>
           <div>
             <div class="hl-t">Best Paper Award</div>
-            <div class="hl-d">Outstanding papers will be recognized with a <strong>Best Paper Award</strong> and potential travel support.</div>
+            <div class="hl-d">Outstanding papers will be recognized with a <strong>Best Paper Award</strong>. Details to be announced.</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ TOPICS ━━ -->
+<section class="sec topics-bg" id="topics">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Research Areas</span>
+      <h2>Topics of <span class="ul">Interest</span></h2>
+      <p>We invite submissions on topics including, but not limited to, the following areas. All submissions must pertain to Multimodal LLMs.</p>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-card anim">
+        <div class="topic-title">Evaluation and Auditing</div>
+        <div class="topic-desc">Methods and metrics for auditing discoveries mediated by foundation models.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Benchmarks and Datasets</div>
+        <div class="topic-desc">New datasets for assessing the responsibility and reliability of MLLMs in discovery tasks.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Bias and Vulnerabilities</div>
+        <div class="topic-desc">Analysis of how multimodal biases distort pattern discovery and lead to spurious correlations.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Fairness-Aware Discovery</div>
+        <div class="topic-desc">Trade-offs between fairness constraints and discovery power.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Interpretability and Transparency</div>
+        <div class="topic-desc">Techniques for making multimodal models understandable for trustworthy data mining.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Synthetic Data &amp; Hallucination</div>
+        <div class="topic-desc">How MLLM-generated synthetic data and hallucinated patterns propagate into and corrupt downstream discovery pipelines.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Failure Modes in Generative AI</div>
+        <div class="topic-desc">Case studies on how models amplify or suppress critical signals.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Agentic Discovery Pipelines</div>
+        <div class="topic-desc">Bias accumulation and error propagation in multi-step MLLM agents that iteratively explore data.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">High-Stakes Domain Discovery</div>
+        <div class="topic-desc">Challenges of MLLM-mediated discovery in healthcare, finance, and scientific research.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Human-Centric Discovery</div>
+        <div class="topic-desc">Agency, trust, and accountability in human-AI collaborative discovery.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Multimodal Fusion &amp; Distortion</div>
+        <div class="topic-desc">How different fusion mechanisms introduce spurious cross-modal correlations and affect the validity of discovered causal hypotheses.</div>
+      </div>
+      <div class="topic-card anim">
+        <div class="topic-title">Responsible Deployment</div>
+        <div class="topic-desc">Use of MLLMs under privacy, regulatory, and robustness constraints.</div>
       </div>
     </div>
   </div>
@@ -793,23 +873,29 @@ footer{background:var(--navy);padding:60px 0 0}
       <h2>Important Dates</h2>
     </div>
     <div class="dates-row">
-      <div class="dc anim">
+      <div class="dc hi anim">
         <div class="dc-n">01</div>
         <div class="dc-lbl">Deadline</div>
         <div class="dc-title">Paper Submission</div>
-        <div class="dc-date"><del>May 8, 2026</del><br><span class="em">May 15, 2026 (extended)</span></div>
+        <div class="dc-date"><span class="em">April 30, 2026</span></div>
       </div>
-      <div class="dc hi anim">
+      <div class="dc anim">
         <div class="dc-n">02</div>
         <div class="dc-lbl">Decision</div>
         <div class="dc-title">Author Notification</div>
-        <div class="dc-date"><span class="em">June 8, 2026</span></div>
+        <div class="dc-date">June 4, 2026</div>
       </div>
       <div class="dc anim">
         <div class="dc-n">03</div>
         <div class="dc-lbl">Deadline</div>
         <div class="dc-title">Camera-Ready</div>
-        <div class="dc-date">June 29, 2026</div>
+        <div class="dc-date">June 11, 2026</div>
+      </div>
+      <div class="dc anim">
+        <div class="dc-n">04</div>
+        <div class="dc-lbl">Event</div>
+        <div class="dc-title">Workshop Date</div>
+        <div class="dc-date">August 2026<br><span style="opacity:.5;font-size:.78rem">(exact date TBD)</span></div>
       </div>
     </div>
   </div>
@@ -821,49 +907,51 @@ footer{background:var(--navy);padding:60px 0 0}
     <div class="sh c">
       <span class="tag">Submissions</span>
       <h2>Call for <span class="ul">Contributions</span></h2>
-      <p>Three submission tracks with different page limits and review criteria.</p>
+      <p>Two submission tracks — choose based on the maturity and nature of your work.</p>
     </div>
     <div class="tracks">
       <div class="track anim">
         <span class="track-seq">Track 01</span>
         <h3>Regular Track</h3>
-        <p>Novel research contributions presenting new methods, algorithms, datasets, or significant empirical findings in the workshop scope.</p>
+        <p>For mature research, novel methodologies, or comprehensive empirical studies. We encourage submissions that provide rigorous technical contributions to multimodal learning and data mining, including novel algorithms, large-scale evaluations, or in-depth case studies in high-stakes domains.</p>
         <ul class="tspec">
-          <li><span class="k">Page Limit</span>4–7 pages (excl. refs)</li>
-          <li><span class="k">Format</span>KDD 2026 template</li>
-          <li><span class="k">Review</span>Double-blind</li>
-          <li><span class="k">Archival</span>Non-archival (journal invite)</li>
+          <li><span class="k">Page Limit</span>Up to 6 pages (excl. refs)</li>
+          <li><span class="k">Format</span>ACM sigconf (LaTeX)</li>
+          <li><span class="k">Review</span>Single-blind</li>
+          <li><span class="k">Archival</span>Non-archival</li>
         </ul>
         <a href="#submit" class="tlink">Submit Regular Paper →</a>
       </div>
       <div class="track anim">
         <span class="track-seq">Track 02</span>
-        <h3>Abstract Track</h3>
-        <p>Preliminary research outcomes and work-in-progress to increase research impact and nurture collaborations across communities.</p>
+        <h3>Extended Abstract Track</h3>
+        <p>For early-stage ideas, provocative position statements, and vision papers to spark high-energy discussion. We especially welcome reports on <em>"negative results"</em> — sharing what didn't work and why is often as valuable as a success story.</p>
         <ul class="tspec">
-          <li><span class="k">Page Limit</span>Up to 4 pages</li>
-          <li><span class="k">Format</span>KDD 2026 template</li>
+          <li><span class="k">Page Limit</span>Up to 2 pages (excl. refs)</li>
+          <li><span class="k">Format</span>ACM sigconf (LaTeX)</li>
           <li><span class="k">Review</span>Single-blind</li>
           <li><span class="k">Archival</span>Non-archival</li>
         </ul>
         <a href="#submit" class="tlink">Submit Abstract →</a>
       </div>
-      <div class="track anim">
-        <span class="track-seq">Track 03</span>
-        <h3>Late-Breaking Track</h3>
-        <p>Recently published work of high practical significance. Present published findings to the KDD community.</p>
-        <ul class="tspec">
-          <li><span class="k">Page Limit</span>Up to 4 pages</li>
-          <li><span class="k">Format</span>KDD 2026 template</li>
-          <li><span class="k">Review</span>Light review</li>
-          <li><span class="k">Archival</span>Non-archival</li>
-        </ul>
-        <a href="#submit" class="tlink">Submit Late-Breaking →</a>
-      </div>
     </div>
+
+    <div class="fmt-box">
+      <div class="fmt-box-title">Formatting &amp; Submission Guidelines</div>
+      <ul class="fmt-list">
+        <li><strong>Template:</strong> ACM Conference Proceedings Primary Article Template — use the LaTeX <code>sigconf</code> format (<code>\documentclass[sigconf]{acmart}</code>). Submissions that deviate significantly from the format or page limits may be rejected without review.</li>
+        <li><strong>Single-Blind Review:</strong> Include your names and affiliations in the submission.</li>
+        <li><strong>Appendices:</strong> May be included after references; reviewers are not required to read them. The main paper must be self-contained.</li>
+        <li><strong>Non-Archival:</strong> Papers will be posted on the workshop website but will not appear in the ACM Digital Library. Authors may freely submit extended versions to other venues.</li>
+        <li><strong>KDD Main Track:</strong> Authors of accepted KDD 2026 main track papers may present at the workshop if the topic aligns with MLLM and Responsibility.</li>
+        <li><strong>Attendance:</strong> At least one author of each accepted paper must register and attend the workshop.</li>
+        <li><strong>All deadlines:</strong> 23:59 AoE (Anywhere on Earth).</li>
+      </ul>
+    </div>
+
     <div class="submit-row">
-      <a href="#" class="btn btn-p" id="submit">Submit via OpenReview →</a>
-      <span class="submit-note">All deadlines 23:59 AoE</span>
+      <a href="https://respmultimodal2026.github.io/" target="_blank" class="btn btn-p" id="submit">Submit via OpenReview →</a>
+      <span class="submit-note">Submission link to be updated on the workshop website</span>
     </div>
   </div>
 </section>
@@ -874,29 +962,29 @@ footer{background:var(--navy);padding:60px 0 0}
     <div class="sh c">
       <span class="tag">Keynotes</span>
       <h2>Invited <span class="ul">Speakers</span></h2>
-      <p>Distinguished researchers from academia and industry.</p>
+      <p>Distinguished researchers from academia and industry. Details to be announced.</p>
     </div>
     <div class="spk-grid">
       <div class="spk-card anim">
-        <div class="spk-av">SN</div>
+        <div class="spk-av">TBA</div>
         <div>
-          <span class="spk-name">Speaker Name</span>
+          <span class="spk-name">Speaker TBA</span>
           <span class="spk-aff">University / Institution</span>
           <span class="spk-topic">Talk Topic TBD</span>
         </div>
       </div>
       <div class="spk-card anim">
-        <div class="spk-av">SN</div>
+        <div class="spk-av">TBA</div>
         <div>
-          <span class="spk-name">Speaker Name</span>
+          <span class="spk-name">Speaker TBA</span>
           <span class="spk-aff">University / Institution</span>
           <span class="spk-topic">Talk Topic TBD</span>
         </div>
       </div>
       <div class="spk-card anim">
-        <div class="spk-av">SN</div>
+        <div class="spk-av">TBA</div>
         <div>
-          <span class="spk-name">Speaker Name</span>
+          <span class="spk-name">Speaker TBA</span>
           <span class="spk-aff">University / Institution</span>
           <span class="spk-topic">Talk Topic TBD</span>
         </div>
@@ -913,30 +1001,115 @@ footer{background:var(--navy);padding:60px 0 0}
       <h2>Workshop <span class="ul">Organizers</span></h2>
     </div>
     <div class="org-g">
+
+      <!-- General Chairs -->
       <div class="org-sec anim">
         <div class="org-lbl">General Chairs</div>
         <div class="org-row">
-          <div class="org-card"><div class="org-av">GC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University Name</span></div></div>
-          <div class="org-card"><div class="org-av">GC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University Name</span></div></div>
+          <div class="org-card">
+            <div class="org-av">SK</div>
+            <div>
+              <span class="org-name">Seungbae Kim</span>
+              <span class="org-inst">University of South Florida</span>
+              <a class="org-link" href="https://sites.google.com/site/sbkimcv/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">JH</div>
+            <div>
+              <span class="org-name">Jinyoung Han</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://sites.google.com/site/jyhantop/jinyoung-han-ph-d" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">SS</div>
+            <div>
+              <span class="org-name">Shyam Sundar</span>
+              <span class="org-inst">Pennsylvania State University</span>
+              <a class="org-link" href="https://bellisario.psu.edu/people/s-shyam-sundar" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">WW</div>
+            <div>
+              <span class="org-name">Wei Wang</span>
+              <span class="org-inst">University of California, Los Angeles</span>
+              <a class="org-link" href="https://web.cs.ucla.edu/~weiwang/" target="_blank">↗ Website</a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Program Chairs -->
       <div class="org-sec anim">
         <div class="org-lbl">Program Chairs</div>
         <div class="org-row">
-          <div class="org-card"><div class="org-av">PC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University / Company</span></div></div>
-          <div class="org-card"><div class="org-av">PC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University / Company</span></div></div>
-          <div class="org-card"><div class="org-av">PC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University / Company</span></div></div>
-          <div class="org-card"><div class="org-av">PC</div><div><span class="org-name">Organizer Name</span><span class="org-inst">University / Company</span></div></div>
+          <div class="org-card">
+            <div class="org-av">HK</div>
+            <div>
+              <span class="org-name">Haewoon Kwak</span>
+              <span class="org-inst">Indiana University</span>
+              <a class="org-link" href="https://luddy.iu.edu/people/kwak-haewoon.html" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">JA</div>
+            <div>
+              <span class="org-name">Jisun An</span>
+              <span class="org-inst">Indiana University</span>
+              <a class="org-link" href="https://jisun.me/" target="_blank">↗ Website</a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Local Arrangement Chairs -->
       <div class="org-sec anim">
-        <div class="org-lbl">Steering Committee</div>
+        <div class="org-lbl">Local Arrangement Chairs</div>
         <div class="org-row">
-          <div class="org-card"><div class="org-av">SC</div><div><span class="org-name">Steering Member</span><span class="org-inst">Institution</span></div></div>
-          <div class="org-card"><div class="org-av">SC</div><div><span class="org-name">Steering Member</span><span class="org-inst">Institution</span></div></div>
-          <div class="org-card"><div class="org-av">SC</div><div><span class="org-name">Steering Member</span><span class="org-inst">Institution</span></div></div>
+          <div class="org-card">
+            <div class="org-av">SH</div>
+            <div>
+              <span class="org-name">Sung-Eun Hong</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://www.csehong.com/" target="_blank">↗ Website</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">YC</div>
+            <div>
+              <span class="org-name">Yunseok Choi</span>
+              <span class="org-inst">Sungkyunkwan University</span>
+              <a class="org-link" href="https://pure.skku.edu/en/persons/yunseok-choi/" target="_blank">↗ Website</a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Government & Industry Chairs -->
+      <div class="org-sec anim">
+        <div class="org-lbl">Government &amp; Industry Chairs</div>
+        <div class="org-row">
+          <div class="org-card">
+            <div class="org-av">SP</div>
+            <div>
+              <span class="org-name">Soyoung Park</span>
+              <span class="org-inst">National Assembly Research Service</span>
+              <a class="org-link" href="https://www.linkedin.com/in/soyoung-park-701388143/" target="_blank">↗ LinkedIn</a>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-av">SL</div>
+            <div>
+              <span class="org-name">Seunghyun Lee</span>
+              <span class="org-inst">Naver AI Lab</span>
+              <a class="org-link" href="https://www.linkedin.com/in/seunghyun-lee0845528b/" target="_blank">↗ LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -947,20 +1120,10 @@ footer{background:var(--navy);padding:60px 0 0}
     <div class="sh c" style="margin-bottom:28px">
       <span class="tag">Reviewers</span>
       <h2>Program <span class="ul">Committee</span></h2>
+      <p>To be announced.</p>
     </div>
-    <div class="pc-grid">
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
-      <div class="pc-item anim"><div class="pc-dot"></div><div><span class="pc-name">Reviewer Name</span><span class="pc-inst">Institution</span></div></div>
+    <div style="text-align:center;padding:40px 0;color:var(--muted);font-family:var(--fm);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;">
+      TBA — Program committee list will be updated soon.
     </div>
   </div>
 </section>
@@ -970,15 +1133,16 @@ footer{background:var(--navy);padding:60px 0 0}
   <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
-        <h3>Workshop @ KDD 2026</h3>
-        <p>International Workshop held in conjunction with ACM SIGKDD 2026, Jeju ICC, South Korea.</p>
-        <div class="ft-contact">contact@workshop.org</div>
+        <h3>RespMultimodal 2026 @ KDD</h3>
+        <p>International Workshop on Responsible Multimodal Foundation Models for Knowledge Discovery, held in conjunction with ACM SIGKDD 2026, Jeju ICC, South Korea.</p>
+        <div class="ft-contact">General inquiries → Seungbae Kim &nbsp;·&nbsp; Paper submissions → Haewoon Kwak</div>
       </div>
       <div class="ft-col">
         <h4>General Info</h4>
         <ul>
           <li><a href="#about">Home</a></li>
           <li><a href="#goals">About Workshop</a></li>
+          <li><a href="#topics">Topics</a></li>
           <li><a href="#organizers">Organizers</a></li>
           <li><a href="#pc">Program Committee</a></li>
         </ul>
@@ -987,26 +1151,23 @@ footer{background:var(--navy);padding:60px 0 0}
         <h4>Submissions</h4>
         <ul>
           <li><a href="#calls">Regular Track</a></li>
-          <li><a href="#calls">Abstract Track</a></li>
-          <li><a href="#calls">Late-Breaking Track</a></li>
+          <li><a href="#calls">Extended Abstract Track</a></li>
           <li><a href="#submit">Submit Paper</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Program</h4>
+        <h4>Links</h4>
         <ul>
-          <li><a href="#program">At a Glance</a></li>
+          <li><a href="https://respmultimodal2026.github.io/" target="_blank">Workshop Website ↗</a></li>
+          <li><a href="https://kdd2026.kdd.org/" target="_blank">KDD 2026 ↗</a></li>
           <li><a href="#speakers">Keynote Speakers</a></li>
-          <li><a href="#program">Full Schedule</a></li>
-          <li><a href="#program">Accepted Papers</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-bot">
-      <p>© 2026 Workshop Organizing Committee · Co-located with ACM SIGKDD 2026</p>
+      <p>© 2026 RespMultimodal Workshop Organizing Committee · Co-located with ACM SIGKDD 2026</p>
       <div class="ft-soc">
-        <a href="#" title="X">X</a>
-        <a href="#" title="LinkedIn">in</a>
+        <a href="https://respmultimodal2026.github.io/" target="_blank" title="Website">W</a>
         <a href="#" title="Email">@</a>
       </div>
     </div>
@@ -1059,7 +1220,7 @@ const io=new IntersectionObserver(ee=>ee.forEach(e=>{
 document.querySelectorAll('.anim').forEach(el=>io.observe(el));
 
 /* active nav */
-const ids=['about','goals','calls','speakers','organizers','pc'];
+const ids=['about','goals','topics','calls','speakers','organizers','pc'];
 const nls=document.querySelectorAll('nav>ul>li>a');
 const hh=()=>hdr.offsetHeight+12;
 function upNav(){
