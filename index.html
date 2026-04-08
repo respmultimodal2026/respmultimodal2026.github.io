@@ -196,6 +196,18 @@ nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .hd.d{width:64px; height:64px; background:var(--accent);opacity:.07;bottom:22%;left:9%}
 .hd.e{width:116px;height:116px;border:2px solid var(--blue);opacity:.07;bottom:12%;right:22%}
 
+.hero-logo-deco{
+  position:absolute;right:6%;bottom:8%;
+  width:320px;height:320px;
+  opacity:.09;
+  animation:floatDeco 6s ease-in-out infinite;
+  pointer-events:none
+}
+@keyframes floatDeco{
+  0%,100%{transform:translateY(0px) rotate(0deg)}
+  50%{transform:translateY(-18px) rotate(3deg)}
+}
+
 .hero-g{
   display:grid;grid-template-columns:1fr 360px;
   gap:64px;align-items:start;position:relative;z-index:1
@@ -680,6 +692,12 @@ footer{background:var(--navy);padding:60px 0 0}
   <div class="hero-deco">
     <div class="hd a"></div><div class="hd b"></div>
     <div class="hd c"></div><div class="hd d"></div><div class="hd e"></div>
+    <!-- 로고 심볼 배경 장식 -->
+    <svg class="hero-logo-deco" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="90" height="90" rx="18" stroke="#00a896" stroke-width="7"/>
+      <rect x="52" y="52" width="90" height="90" rx="18" stroke="#2356b0" stroke-width="7"/>
+      <circle cx="52" cy="52" r="9" fill="#3d7fff"/>
+    </svg>
   </div>
   <div class="wrap">
     <div class="hero-g">
