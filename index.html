@@ -40,7 +40,7 @@ a:hover{color:var(--blue)}
 .sec    {padding:84px 0}
 .sec-sm {padding:60px 0}
 .tag{display:inline-block;font-family:var(--fm);font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;background:var(--mid);color:var(--blue)}
-.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 24px;border-radius:var(--r);font-weight:600;font-size:.88rem;border:none;cursor:pointer;transition:all .18s}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 24px;border-radius:var(--r);font-weight:600;font-size:.88rem;border:none;cursor:pointer;white-space:nowrap;transition:all .18s}
 .btn-p{background:var(--accent);color:#fff}
 .btn-p:hover{background:var(--blue);color:#fff;box-shadow:0 4px 18px rgba(61,127,255,.3)}
 .btn-o{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
@@ -68,7 +68,7 @@ nav>ul>li:hover>a .chev{transform:rotate(180deg)}
 nav>ul>li:hover>.drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .drop li a{font-size:.83rem;color:var(--muted);padding:8px 12px;border-radius:7px;display:block;transition:background .13s,color .13s}
 .drop li a:hover{color:var(--accent);background:var(--mid)}
-.nav-cta{margin-left:14px}
+.nav-cta{margin-left:14px;flex-shrink:0}
 .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none}
 .hbg span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:.3s;display:block}
 .mob{background:#fff;border-top:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
@@ -571,18 +571,18 @@ footer{background:var(--navy);padding:60px 0 0}
       <p>Distinguished researchers from academia and industry. Details to be announced.</p>
     </div>
     <div class="spk-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;">
-      <div class="spk-card anim" style="max-width:480px;width:100%;grid-template-columns:120px 1fr;gap:24px;padding:36px 32px;">
-        <div class="spk-av" style="overflow:hidden;padding:0;width:120px;height:120px;border-radius:14px;"><img src="chaires_photo/Yizhou Sun.jpg" alt="Yizhou Sun" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+      <div class="spk-card anim" style="grid-template-columns:100px auto;gap:20px;padding:28px 30px;">
+        <div class="spk-av" style="overflow:hidden;padding:0;width:100px;height:100px;border-radius:14px;"><img src="chaires_photo/Yizhou Sun.jpg" alt="Yizhou Sun" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
         <div style="display:flex;flex-direction:column;justify-content:center;">
-          <span class="spk-name" style="font-size:1.2rem;margin-bottom:6px;">Yizhou Sun</span>
-          <span class="spk-aff" style="font-size:.9rem;">University of California, Los Angeles</span>
+          <span class="spk-name" style="font-size:1.15rem;margin-bottom:6px;">Yizhou Sun</span>
+          <span class="spk-aff" style="font-size:.88rem;">University of California, Los Angeles</span>
         </div>
       </div>
-      <div class="spk-card anim" style="max-width:480px;width:100%;grid-template-columns:120px 1fr;gap:24px;padding:36px 32px;">
-        <div class="spk-av" style="overflow:hidden;padding:0;width:120px;height:120px;border-radius:14px;"><img src="chaires_photo/Soyoung Park.png" alt="Soyoung Park" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+      <div class="spk-card anim" style="grid-template-columns:100px auto;gap:20px;padding:28px 30px;">
+        <div class="spk-av" style="overflow:hidden;padding:0;width:100px;height:100px;border-radius:14px;"><img src="chaires_photo/Soyoung Park.png" alt="Soyoung Park" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
         <div style="display:flex;flex-direction:column;justify-content:center;">
-          <span class="spk-name" style="font-size:1.2rem;margin-bottom:6px;">Soyoung Park</span>
-          <span class="spk-aff" style="font-size:.9rem;">National Assembly Research Service</span>
+          <span class="spk-name" style="font-size:1.15rem;margin-bottom:6px;">Soyoung Park</span>
+          <span class="spk-aff" style="font-size:.88rem;">National Assembly Research Service</span>
         </div>
       </div>
     </div>
