@@ -60,7 +60,7 @@ header.scrolled{box-shadow:var(--sh)}
 .logo{font-family:var(--fh);font-size:1.05rem;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:9px;text-decoration:none}
 nav>ul{display:flex;align-items:center;gap:2px}
 nav>ul>li{position:relative}
-nav>ul>li>a{font-size:.86rem;font-weight:500;color:var(--text);padding:7px 12px;border-radius:8px;display:flex;align-items:center;gap:4px;transition:background .14s,color .14s}
+nav>ul>li>a{font-size:.82rem;font-weight:500;color:var(--text);padding:7px 8px;border-radius:8px;display:flex;align-items:center;gap:4px;white-space:nowrap;transition:background .14s,color .14s}
 nav>ul>li>a:hover,nav>ul>li>a.on{background:var(--mid);color:var(--accent)}
 .chev{font-size:.6rem;opacity:.5;transition:transform .2s}
 nav>ul>li:hover>a .chev{transform:rotate(180deg)}
@@ -227,6 +227,9 @@ footer{background:var(--navy);padding:60px 0 0}
 .anim{opacity:0}
 .anim.in{animation:fadeUp .5s ease forwards}
 .anim:nth-child(2){animation-delay:.08s}.anim:nth-child(3){animation-delay:.15s}.anim:nth-child(4){animation-delay:.22s}.anim:nth-child(5){animation-delay:.28s}.anim:nth-child(6){animation-delay:.34s}.anim:nth-child(7){animation-delay:.40s}.anim:nth-child(8){animation-delay:.46s}.anim:nth-child(9){animation-delay:.52s}.anim:nth-child(10){animation-delay:.58s}.anim:nth-child(11){animation-delay:.62s}.anim:nth-child(12){animation-delay:.66s}
+@media(max-width:1140px){
+  nav>ul,.nav-cta{display:none}.hbg{display:flex}
+}
 @media(max-width:1024px){
   .hero{padding:136px 0 68px}.hero-g{grid-template-columns:1fr;gap:36px}.hcard{position:static;max-width:480px}
   .about-box{grid-template-columns:1fr}.about-prose{border-right:none;border-bottom:1px solid var(--border);padding:40px 36px}.about-list{padding:36px 36px 40px}
@@ -271,6 +274,36 @@ footer{background:var(--navy);padding:60px 0 0}
 @media(max-width:768px){.spn-row{gap:20px}.spn-item{padding:16px 24px}.spn-item img{height:40px}.spn-item img[src*="srai"]{height:30px}.spn-item img[src*="iitp"]{height:48px}}
 @media(max-width:480px){.spn-row{flex-direction:column;gap:14px;align-items:stretch}.spn-item{width:100%;justify-content:center}.spn-item img{height:36px}.spn-item img[src*="srai"]{height:26px}.spn-item img[src*="iitp"]{height:44px}}
 
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ACCEPTED PAPERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.papers-bg{background:var(--light)}
+.paper-list{border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;background:#fff}
+.paper-item{display:flex;flex-direction:column;gap:3px;padding:20px 28px;border-bottom:1px solid var(--border);transition:background .15s}
+.paper-item:last-child{border-bottom:none}
+.paper-item:hover{background:var(--light)}
+.paper-title{font-size:.93rem;font-weight:600;color:var(--navy);line-height:1.5}
+.paper-authors{font-size:.81rem;color:var(--muted);line-height:1.5}
+@media(max-width:768px){.paper-item{padding:16px 20px}.paper-title{font-size:.88rem}.paper-authors{font-size:.78rem}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   WORKSHOP PROGRAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.prog-bg{background:var(--light)}
+.prog-list{border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;background:#fff}
+.prog-row{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:16px 28px;border-bottom:1px solid var(--border);align-items:center;transition:background .15s}
+.prog-row:last-child{border-bottom:none}
+.prog-row:hover{background:var(--light)}
+.prog-time{font-family:var(--fm);font-size:.78rem;font-weight:600;color:var(--accent);white-space:nowrap}
+.prog-title{font-size:.92rem;font-weight:600;color:var(--navy)}
+.prog-sub{font-size:.79rem;color:var(--muted);margin-top:1px}
+.prog-row.keynote{background:rgba(61,127,255,.05)}
+.prog-row.keynote .prog-time{color:var(--blue)}
+.prog-row.brk{background:var(--light)}
+.prog-row.brk .prog-time,.prog-row.brk .prog-title{color:var(--muted);font-weight:500}
+.prog-row.award .prog-time{color:var(--teal)}
+@media(max-width:768px){.prog-row{grid-template-columns:1fr;gap:3px;padding:14px 20px}.prog-title{font-size:.88rem}}
+
 .inline-code{
   font-family: var(--fm);
   white-space: nowrap;
@@ -296,7 +329,9 @@ footer{background:var(--navy);padding:60px 0 0}
           <li><a href="#about">Home</a></li>
           <li><a href="#calls">Call for Papers</a></li>
           <li><a href="#topics">Topics</a></li>
+          <li><a href="#papers">Accepted Papers</a></li>
           <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#program">Program</a></li>
           <li><a href="#organizers">Organizers</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
         </ul>
@@ -311,7 +346,9 @@ footer{background:var(--navy);padding:60px 0 0}
     <a href="#about">Home</a>
     <a href="#calls">Call for Papers</a>
     <a href="#topics">Topics</a>
+    <a href="#papers">Accepted Papers</a>
     <a href="#speakers">Speakers</a>
+    <a href="#program">Program</a>
     <a href="#organizers">Organizers</a>
     <a href="#sponsors">Sponsors</a>
     <a href="#submit">Submit Paper →</a>
@@ -339,7 +376,7 @@ footer{background:var(--navy);padding:60px 0 0}
         <div class="hero-meta">
           <div class="meta-item">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="11" rx="2"/><path d="M5 1v3M11 1v3M1 7h14"/></svg>
-            <span>August 2026 (TBD)</span>
+            <span>August 9, 2026</span>
           </div>
           <div class="meta-item">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1C5.2 1 3 3.2 3 6c0 3.8 5 9 5 9s5-5.2 5-9c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6" r="1.5"/></svg>
@@ -361,7 +398,7 @@ footer{background:var(--navy);padding:60px 0 0}
           <div class="di"><span class="dl-label">Paper Submission</span><span class="dl-val hi">May 21, 2026</span></div>
           <div class="di"><span class="dl-label">Author Notification</span><span class="dl-val">June 4, 2026</span></div>
           <div class="di"><span class="dl-label">Camera-Ready</span><span class="dl-val">June 11, 2026</span></div>
-          <div class="di"><span class="dl-label">Workshop Date</span><span class="dl-val hi">August 2026 (TBD)</span></div>
+          <div class="di"><span class="dl-label">Workshop Date</span><span class="dl-val hi">August 9, 2026</span></div>
         </div>
         <div class="hcard-sep"></div>
         <a href="#submit" class="btn btn-p btn-fw">Submit via OpenReview →</a>
@@ -433,7 +470,7 @@ footer{background:var(--navy);padding:60px 0 0}
       <div class="dc hi anim"><div class="dc-n">01</div><div class="dc-lbl">Deadline</div><div class="dc-title">Paper Submission</div><div class="dc-date"><span class="em">May 21, 2026</span></div></div>
       <div class="dc anim"><div class="dc-n">02</div><div class="dc-lbl">Decision</div><div class="dc-title">Author Notification</div><div class="dc-date">June 4, 2026</div></div>
       <div class="dc anim"><div class="dc-n">03</div><div class="dc-lbl">Deadline</div><div class="dc-title">Camera-Ready</div><div class="dc-date">June 11, 2026</div></div>
-      <div class="dc anim"><div class="dc-n">04</div><div class="dc-lbl">Event</div><div class="dc-title">Workshop Date</div><div class="dc-date">August 2026<br><span style="opacity:.5;font-size:.78rem">(exact date TBD)</span></div></div>
+      <div class="dc anim"><div class="dc-n">04</div><div class="dc-lbl">Event</div><div class="dc-title">Workshop Date</div><div class="dc-date">August 9, 2026<br><span style="opacity:.5;font-size:.78rem">(afternoon session)</span></div></div>
     </div>
   </div>
 </section>
@@ -490,6 +527,41 @@ footer{background:var(--navy);padding:60px 0 0}
   </div>
 </section>
 
+<!-- ━━ ACCEPTED PAPERS ━━ -->
+<section class="sec papers-bg" id="papers">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Program</span>
+      <h2>Accepted <span class="ul">Papers</span></h2>
+      <p>The following papers have been accepted to RespMultimodal 2026.</p>
+    </div>
+    <div class="paper-list">
+      <div class="paper-item anim"><div class="paper-title">Responsible Evidence Routing for Foundation-Model-Mediated Multimodal Conversational Recommendation</div><div class="paper-authors">Piao Huilin, Seoin Choi, Junbo Shim, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">More Modality, Less Reliability? A Negative Result on MLLM-Generated Clinical Knowledge Claims</div><div class="paper-authors">Jiwon Park, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">The Auditor Is Not Neutral: Empirical Evidence Against Single-Model MLLM Curation of Healthcare Training Data</div><div class="paper-authors">Boyoung Kang, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Can MLLMs Judge Charts? Evaluating the Reliability of MLLM-as-a-Judge in Chart Understanding</div><div class="paper-authors">Yujin Min, Young-Jun Lee, YunSeok Choi</div></div>
+      <div class="paper-item anim"><div class="paper-title">PubTables-QA: A Benchmark Toward Cross-Page Table Reasoning in Table Visual Question Answering</div><div class="paper-authors">Jiin Han, Suyoung Bae, Yerim Choi, Sangyun Lee, Kyutae Kim, RyunHo Kim, Jee-Hyong Lee, Changkyu Choi, YunSeok Choi</div></div>
+      <div class="paper-item anim"><div class="paper-title">Beyond Final Responses: Evaluating Persona-Consistent Variation in Multimodal LLM Simulation</div><div class="paper-authors">Gagyeom Lim, Seonah Kim, Jimin kweon, Jaekwang Kim</div></div>
+      <div class="paper-item anim"><div class="paper-title">Perception Sharing Amplifies, Not Aligns: Characterizing Cross-Agent Disagreement in V2V Cooperative MLLM Driving</div><div class="paper-authors">Ari Kim, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">AIRCL: Adaptive Importance-Weighted Retrieval Contrastive Learning for Hateful Meme Detection</div><div class="paper-authors">Jian Park, Sihyeon Yang, Saejin Ju, Jinyoung Han</div></div>
+      <div class="paper-item anim"><div class="paper-title">Narrative-Induced Moral Bias in Large Language Models</div><div class="paper-authors">Yurim Son, Sumin Park, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">HalluCompass: Direction-Aware Auditing of Multimodal Hallucination for Responsible Knowledge Discovery</div><div class="paper-authors">Jinkwon Lee, Youn Jun Seong, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Input Modality Matters for Safety Grounding: Auditing Multimodal-Capable GPT-4o in Mental Health Crisis Response</div><div class="paper-authors">Myungki Shin, Jihyun Jung, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Where to Adapt for MLLM Merging? A Module-Level Analysis</div><div class="paper-authors">Hyunjae Ra, Aecheon Jung, Sungeun Hong</div></div>
+      <div class="paper-item anim"><div class="paper-title">Hierarchical Multimodal Memory for Training-Free Video Moment Retrieval</div><div class="paper-authors">Kyeongyoon Lee, Hongyeob Kim, Sungeun Hong</div></div>
+      <div class="paper-item anim"><div class="paper-title">MIRAGE: Auditing and Mitigating Single-Intent Collapse in MLLM-Mediated Multimodal Retrieval</div><div class="paper-authors">Sehyeon Park, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Responsible Multimodal MLLM Auditing through Urban Hidden Demand Inference</div><div class="paper-authors">Soyoung Yun, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Can MLLMs Reliably Extract Affective Signals for Sequential Recommendation?</div><div class="paper-authors">JeongWan Kang, Seohyeon Hong, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Bias in Quantized MLLMs: Abstention Shifts and Output Instability</div><div class="paper-authors">Satya Uday Sanku, Zaima Zarnaz, Ian Cody Koratsky, Kunwoo Park, Seungbae Kim</div></div>
+      <div class="paper-item anim"><div class="paper-title">Transferrable and Robust Representation: Vision-Language and Multimodal Models for Synthetic Image Detection</div><div class="paper-authors">Liyue Fan, Joseph Roberson</div></div>
+      <div class="paper-item anim"><div class="paper-title">More Modality Is Not Better Evidence: Diagnosing Evidence and Question-Logic Bottlenecks in Multimodal Theory-of-Mind Reasoning</div><div class="paper-authors">Taehun Kim, Minjoo Kim, Seohyeon Hong, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">EviRel: Evidence-Preserving Temporal Memory for Future Social Relation Reasoning in Videos</div><div class="paper-authors">Myoungseok Song, HAYOUNG OH</div></div>
+      <div class="paper-item anim"><div class="paper-title">Same Data, Different Decisions: Auditing Presentation-Induced Recommendation Shifts in Multimodal Simpson-Style Discovery</div><div class="paper-authors">HikaruMatsuoka</div></div>
+      <div class="paper-item anim"><div class="paper-title">UniECG: Understanding and Generating ECG in One Unified Model</div><div class="paper-authors">Jiarui Jin, Xiuhan Zhang, Haoyu Wang, Xingliang Wu, Xiang Lan, Jun Li, Hongyan Li, Shenda Hong</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ━━ INVITED SPEAKERS ━━ -->
 <section class="sec spk-bg" id="speakers">
   <div class="wrap">
@@ -498,15 +570,45 @@ footer{background:var(--navy);padding:60px 0 0}
       <h2>Invited <span class="ul">Speakers</span></h2>
       <p>Distinguished researchers from academia and industry. Details to be announced.</p>
     </div>
-    <div class="spk-grid" style="display:flex;justify-content:center;">
-      <div class="spk-card anim" style="max-width:520px;width:100%;grid-template-columns:140px 1fr;gap:28px;padding:40px 36px;">
-        <div class="spk-av" style="overflow:hidden;padding:0;width:140px;height:140px;border-radius:14px;"><img src="chaires_photo/Yizhou Sun.jpg" alt="Yizhou Sun" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+    <div class="spk-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;">
+      <div class="spk-card anim" style="max-width:480px;width:100%;grid-template-columns:120px 1fr;gap:24px;padding:36px 32px;">
+        <div class="spk-av" style="overflow:hidden;padding:0;width:120px;height:120px;border-radius:14px;"><img src="chaires_photo/Yizhou Sun.jpg" alt="Yizhou Sun" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
         <div style="display:flex;flex-direction:column;justify-content:center;">
-          <span class="spk-name" style="font-size:1.3rem;margin-bottom:6px;">Yizhou Sun</span>
-          <span class="spk-aff" style="font-size:.92rem;margin-bottom:14px;">University of California, Los Angeles</span>
-          <span class="spk-topic">Talk Topic TBD</span>
+          <span class="spk-name" style="font-size:1.2rem;margin-bottom:6px;">Yizhou Sun</span>
+          <span class="spk-aff" style="font-size:.9rem;">University of California, Los Angeles</span>
         </div>
       </div>
+      <div class="spk-card anim" style="max-width:480px;width:100%;grid-template-columns:120px 1fr;gap:24px;padding:36px 32px;">
+        <div class="spk-av" style="overflow:hidden;padding:0;width:120px;height:120px;border-radius:14px;"><img src="chaires_photo/Soyoung Park.jfif" alt="Soyoung Park" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <span class="spk-name" style="font-size:1.2rem;margin-bottom:6px;">Soyoung Park</span>
+          <span class="spk-aff" style="font-size:.9rem;">National Assembly Research Service</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ WORKSHOP PROGRAM ━━ -->
+<section class="sec prog-bg" id="program">
+  <div class="wrap">
+    <div class="sh c">
+      <span class="tag">Schedule</span>
+      <h2>Workshop <span class="ul">Program</span></h2>
+      <p>August 9, 2026 · Afternoon Session (1:00 PM – 5:00 PM) · ICC Jeju, South Korea</p>
+    </div>
+    <div class="prog-list">
+      <div class="prog-row anim"><div class="prog-time">1:00 – 1:10 PM</div><div><div class="prog-title">Opening</div></div></div>
+      <div class="prog-row anim keynote"><div class="prog-time">1:10 – 1:50 PM</div><div><div class="prog-title">Keynote</div><div class="prog-sub">Prof. Yizhou Sun (University of California, Los Angeles)</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">1:50 – 2:05 PM</div><div><div class="prog-title">Main Track Invited Talk 1</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">2:05 – 2:25 PM</div><div><div class="prog-title">Spotlight Talks</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">2:25 – 3:00 PM</div><div><div class="prog-title">Poster Session 1</div></div></div>
+      <div class="prog-row anim brk"><div class="prog-time">3:00 – 3:10 PM</div><div><div class="prog-title">Break</div></div></div>
+      <div class="prog-row anim keynote"><div class="prog-time">3:10 – 3:30 PM</div><div><div class="prog-title">Keynote</div><div class="prog-sub">Dr. Soyoung Park (National Assembly Research Service)</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">3:30 – 3:45 PM</div><div><div class="prog-title">Main Track Invited Talk 2</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">3:45 – 4:05 PM</div><div><div class="prog-title">Spotlight Talks</div></div></div>
+      <div class="prog-row anim"><div class="prog-time">4:05 – 4:40 PM</div><div><div class="prog-title">Poster Session 2</div></div></div>
+      <div class="prog-row anim award"><div class="prog-time">4:40 – 5:00 PM</div><div><div class="prog-title">Best Paper Award &amp; Closing</div></div></div>
     </div>
   </div>
 </section>
@@ -608,7 +710,7 @@ footer{background:var(--navy);padding:60px 0 0}
 
 <!-- ━━ FOOTER ━━ -->
 <!-- Designed by Gagyoem Lim -->
-<footer id="program">
+<footer>
   <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
@@ -622,6 +724,8 @@ footer{background:var(--navy);padding:60px 0 0}
           <li><a href="#about">Home</a></li>
           <li><a href="#goals">About Workshop</a></li>
           <li><a href="#topics">Topics</a></li>
+          <li><a href="#papers">Accepted Papers</a></li>
+          <li><a href="#program">Program</a></li>
           <li><a href="#organizers">Organizers</a></li>
           <li><a href="#pc">Program Committee</a></li>
         </ul>
@@ -675,7 +779,7 @@ const io=new IntersectionObserver(ee=>ee.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
 }),{threshold:.1,rootMargin:'0px 0px -24px 0px'});
 document.querySelectorAll('.anim').forEach(el=>io.observe(el));
-const ids=['about','goals','topics','calls','speakers','organizers','sponsors','pc'];
+const ids=['about','goals','topics','calls','papers','speakers','program','organizers','sponsors','pc'];
 const nls=document.querySelectorAll('nav>ul>li>a');
 const hh=()=>hdr.offsetHeight+12;
 function upNav(){
