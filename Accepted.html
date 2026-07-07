@@ -649,6 +649,18 @@ footer{background:var(--navy);padding:60px 0 0}
 .page-banner h1 em{font-style:normal;color:var(--accent)}
 .page-banner p{font-size:.95rem;color:var(--muted)}
 .tba-box{text-align:center;padding:80px 0;color:var(--muted);font-family:var(--fm);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+.papers-bg{background:var(--light)}
+.poster-sessions{display:grid;gap:30px}
+.poster-session-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:0 0 12px}
+.poster-session-title{font-family:var(--fh);font-size:1.05rem;font-weight:700;color:var(--navy)}
+.poster-session-count{font-family:var(--fm);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.paper-list{border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;background:#fff}
+.paper-item{display:flex;flex-direction:column;gap:3px;padding:20px 28px;border-bottom:1px solid var(--border);transition:background .15s}
+.paper-item:last-child{border-bottom:none}
+.paper-item:hover{background:var(--light)}
+.paper-title{font-size:.93rem;font-weight:600;color:var(--navy);line-height:1.5}
+.paper-authors{font-size:.81rem;color:var(--muted);line-height:1.5}
+@media(max-width:768px){.poster-sessions{gap:24px}.poster-session-head{align-items:flex-start;flex-direction:column;gap:4px}.poster-session-title{font-size:.98rem}.paper-item{padding:16px 20px}.paper-title{font-size:.88rem}.paper-authors{font-size:.78rem}}
 </style>
 </head>
 <body>
@@ -715,25 +727,56 @@ footer{background:var(--navy);padding:60px 0 0}
 <div class="page-banner">
   <div class="wrap page-banner-inner">
     <h1>Accepted <em>Papers</em></h1>
-    <p>Results will be announced after the review process.</p>
+    <p>The accepted papers are grouped into two poster sessions in the order listed on the homepage.</p>
   </div>
 </div>
-<section class="sec">
+<section class="sec papers-bg" id="papers">
   <div class="wrap">
     <div class="sh c">
-      <span class="tag">Regular Track</span>
-      <h2>Regular <span class="ul">Papers</span></h2>
+      <span class="tag">Program</span>
+      <h2>Poster <span class="ul">Sessions</span></h2>
+      <p>The first 11 papers are assigned to Poster Session 1; the remaining 11 papers are assigned to Poster Session 2.</p>
     </div>
-    <div class="tba-box">TBA — Acceptance notifications will be sent by June 4, 2026.</div>
-  </div>
-</section>
-<section class="sec" style="background:var(--light)">
-  <div class="wrap">
-    <div class="sh c">
-      <span class="tag">Extended Abstract Track</span>
-      <h2>Extended <span class="ul">Abstracts</span></h2>
+    <div class="poster-sessions">
+      <section class="poster-session" id="poster-session-1">
+        <div class="poster-session-head">
+          <h3 class="poster-session-title">Poster Session 1</h3>
+          <span class="poster-session-count">11 papers</span>
+        </div>
+        <div class="paper-list">
+          <div class="paper-item anim"><div class="paper-title">Responsible Evidence Routing for Foundation-Model-Mediated Multimodal Conversational Recommendation</div><div class="paper-authors">Piao Huilin, Seoin Choi, Junbo Shim, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">More Modality, Less Reliability? A Negative Result on MLLM-Generated Clinical Knowledge Claims</div><div class="paper-authors">Jiwon Park, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">The Auditor Is Not Neutral: Empirical Evidence Against Single-Model MLLM Curation of Healthcare Training Data</div><div class="paper-authors">Boyoung Kang, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Can MLLMs Judge Charts? Evaluating the Reliability of MLLM-as-a-Judge in Chart Understanding</div><div class="paper-authors">Yujin Min, Young-Jun Lee, YunSeok Choi</div></div>
+          <div class="paper-item anim"><div class="paper-title">PubTables-QA: A Benchmark Toward Cross-Page Table Reasoning in Table Visual Question Answering</div><div class="paper-authors">Jiin Han, Suyoung Bae, Yerim Choi, Sangyun Lee, Kyutae Kim, RyunHo Kim, Jee-Hyong Lee, Changkyu Choi, YunSeok Choi</div></div>
+          <div class="paper-item anim"><div class="paper-title">Beyond Final Responses: Evaluating Persona-Consistent Variation in Multimodal LLM Simulation</div><div class="paper-authors">Gagyeom Lim, Seonah Kim, Jimin kweon, Jaekwang Kim</div></div>
+          <div class="paper-item anim"><div class="paper-title">Perception Sharing Amplifies, Not Aligns: Characterizing Cross-Agent Disagreement in V2V Cooperative MLLM Driving</div><div class="paper-authors">Ari Kim, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">AIRCL: Adaptive Importance-Weighted Retrieval Contrastive Learning for Hateful Meme Detection</div><div class="paper-authors">Jian Park, Sihyeon Yang, Saejin Ju, Jinyoung Han</div></div>
+          <div class="paper-item anim"><div class="paper-title">Narrative-Induced Moral Bias in Large Language Models</div><div class="paper-authors">Yurim Son, Sumin Park, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">HalluCompass: Direction-Aware Auditing of Multimodal Hallucination for Responsible Knowledge Discovery</div><div class="paper-authors">Jinkwon Lee, Youn Jun Seong, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Input Modality Matters for Safety Grounding: Auditing Multimodal-Capable GPT-4o in Mental Health Crisis Response</div><div class="paper-authors">Myungki Shin, Jihyun Jung, HAYOUNG OH</div></div>
+        </div>
+      </section>
+      <section class="poster-session" id="poster-session-2">
+        <div class="poster-session-head">
+          <h3 class="poster-session-title">Poster Session 2</h3>
+          <span class="poster-session-count">11 papers</span>
+        </div>
+        <div class="paper-list">
+          <div class="paper-item anim"><div class="paper-title">Where to Adapt for MLLM Merging? A Module-Level Analysis</div><div class="paper-authors">Hyunjae Ra, Aecheon Jung, Sungeun Hong</div></div>
+          <div class="paper-item anim"><div class="paper-title">Hierarchical Multimodal Memory for Training-Free Video Moment Retrieval</div><div class="paper-authors">Kyeongyoon Lee, Hongyeob Kim, Sungeun Hong</div></div>
+          <div class="paper-item anim"><div class="paper-title">MIRAGE: Auditing and Mitigating Single-Intent Collapse in MLLM-Mediated Multimodal Retrieval</div><div class="paper-authors">Sehyeon Park, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Responsible Multimodal MLLM Auditing through Urban Hidden Demand Inference</div><div class="paper-authors">Soyoung Yun, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Can MLLMs Reliably Extract Affective Signals for Sequential Recommendation?</div><div class="paper-authors">JeongWan Kang, Seohyeon Hong, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Bias in Quantized MLLMs: Abstention Shifts and Output Instability</div><div class="paper-authors">Satya Uday Sanku, Zaima Zarnaz, Ian Cody Koratsky, Kunwoo Park, Seungbae Kim</div></div>
+          <div class="paper-item anim"><div class="paper-title">Transferrable and Robust Representation: Vision-Language and Multimodal Models for Synthetic Image Detection</div><div class="paper-authors">Liyue Fan, Joseph Roberson</div></div>
+          <div class="paper-item anim"><div class="paper-title">More Modality Is Not Better Evidence: Diagnosing Evidence and Question-Logic Bottlenecks in Multimodal Theory-of-Mind Reasoning</div><div class="paper-authors">Taehun Kim, Minjoo Kim, Seohyeon Hong, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">EviRel: Evidence-Preserving Temporal Memory for Future Social Relation Reasoning in Videos</div><div class="paper-authors">Myoungseok Song, HAYOUNG OH</div></div>
+          <div class="paper-item anim"><div class="paper-title">Same Data, Different Decisions: Auditing Presentation-Induced Recommendation Shifts in Multimodal Simpson-Style Discovery</div><div class="paper-authors">HikaruMatsuoka</div></div>
+          <div class="paper-item anim"><div class="paper-title">UniECG: Understanding and Generating ECG in One Unified Model</div><div class="paper-authors">Jiarui Jin, Xiuhan Zhang, Haoyu Wang, Xingliang Wu, Xiang Lan, Jun Li, Hongyan Li, Shenda Hong</div></div>
+        </div>
+      </section>
     </div>
-    <div class="tba-box">TBA — Acceptance notifications will be sent by June 4, 2026.</div>
   </div>
 </section>
 
